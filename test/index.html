@@ -81,6 +81,21 @@ toLog(window.jsUtils.cc.en2ru("asdfфыва"), 'en2ru: ');
 toLog(window.jsUtils.cc.ru2en("asdfфыва"), 'ru2en: ');
 </pre>
 		</div>
+				<hr/>
+		<div>
+			<h2>Generate css selector</h2>
+			<ul class="function">
+				<li>function genSelector(element)</li>
+			</ul>
+			<ul class="args">
+				<li>DOM element</li>
+			</ul>
+			Code:
+<pre class="prettyprint">
+toLog(window.jsUtils.genSelector($('.function')[2]), 'genSelector: ');
+toLog(window.jsUtils.genSelector($('pre')[3]), 'genSelector: ');
+</pre>
+		</div>
 	</div>
 </body>
 </html>
