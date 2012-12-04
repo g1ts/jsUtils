@@ -90,5 +90,22 @@ window.jsUtils = {
       }
     }
     return names.join(">");
+  },
+  
+  // make tree from an array
+  // array must contain objects with property 'p' define index of his parent
+  a2t: function(a){
+    var tree = {};
+    for(var i=0;i<a.length;i++){
+      if(typeof a[i].p == 'number' && a[i].p >= 0){
+        if(typeof a[a[i].p].childs != 'object'){
+          a[a[i].p].childs = {};
+        }
+        a[a[i].p].childs[i]=a[i];
+      }else{
+        tree[i]=a[i];
+      }
+    }
+    return tree;
   }
 }

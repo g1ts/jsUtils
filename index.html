@@ -65,7 +65,7 @@ toLog(window.jsUtils.randomHex(16), 'randomHex: ');
 toLog(window.jsUtils.randomHexBytes(16), 'randomHexBytes: ');
 </pre>
 		</div>
-				<hr/>
+		<hr/>
 		<div>
 			<h2>Chars convert</h2>
 			<ul class="function">
@@ -94,6 +94,24 @@ toLog(window.jsUtils.cc.ru2en("asdfфыва"), 'ru2en: ');
 <pre class="prettyprint">
 toLog(window.jsUtils.genSelector($('.function')[2]), 'genSelector: ');
 toLog(window.jsUtils.genSelector($('pre')[3]), 'genSelector: ');
+</pre>
+		</div>
+		<hr/>
+		<div>
+			<h2>Array to tree</h2>
+			<ul class="function">
+				<li>function a2t(a)</li>
+				<li>function randomHex(length)</li>
+				<li>function randomHexBytes(length)</li>
+			</ul>
+			<ul class="args">
+				<li>a - array. array must contain objects with property 'p' define index of his parent</li>
+			</ul>
+			Code:
+<pre class="prettyprint">
+var a = [{"p":-1},{"p":-1},{"p":0},{"p":1},{"p":3}];
+toLog(a, 'array: ');
+toLog(window.jsUtils.a2t(a), 'a2t: ');
 </pre>
 		</div>
 	</div>
